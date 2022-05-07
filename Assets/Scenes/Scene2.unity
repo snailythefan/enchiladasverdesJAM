@@ -633,6 +633,7 @@ GameObject:
   - component: {fileID: 1481438473}
   - component: {fileID: 1481438475}
   - component: {fileID: 1481438474}
+  - component: {fileID: 1481438476}
   m_Layer: 5
   m_Name: PlaceholderAnt
   m_TagString: Untagged
@@ -698,6 +699,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481438472}
   m_CullTransparentMesh: 1
+--- !u!95 &1481438476
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481438472}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e6bc9b22a640bea49ace42b509686bf9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1502788809
 GameObject:
   m_ObjectHideFlags: 0
