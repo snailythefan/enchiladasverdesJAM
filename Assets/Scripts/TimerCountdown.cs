@@ -12,7 +12,7 @@ public class TimerCountdown : MonoBehaviour
     //Here we stablish that the timer ends when it hits 0
     float currentTime = 0f;
     //starting time in the countdown
-    float startingTime = 10f;
+    public float startingTime = 10f;
 
     [SerializeField] TextMeshProUGUI countdownText;
     
