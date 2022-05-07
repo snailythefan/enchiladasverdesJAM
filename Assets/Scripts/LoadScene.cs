@@ -32,6 +32,12 @@ public class LoadScene : MonoBehaviour
     //this is our coroutine
     IEnumerator LoadLevel (int levelIndex)
     {
+        //this part of the code WILL stop the player from clicking the button several times
+        //bcus we are locking the cursor to the middle of the screen
+        Cursor.lockState = CursorLockMode.Locked;
+        //we will need to unlock it on the start of a Code for next scene.
+
+
         //this will play out animation
         //transition.SetTrigger("Start");
         //this activates our animation trigger called "Start"
