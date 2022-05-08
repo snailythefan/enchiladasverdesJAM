@@ -3,7 +3,12 @@ guid: 479579794f0ff1d4488258dda7554428
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: anthill_Mtl
+    second: {fileID: 2100000, guid: 5c46044dd32d8104ba3ab315b785d920, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
