@@ -21,7 +21,11 @@ public class NewP1KeySigns : MonoBehaviour
     public List<string> keysRange = new List<string>(keys);
 
     //ant animation
-    public GameObject Ant1; 
+    public Animator anim1;
+    public Animator anim2;
+    public Animator anim3;
+    public Animator anim4;
+    public Animator anim5;
 
     public void randomizedKey()
     {
@@ -36,8 +40,11 @@ public class NewP1KeySigns : MonoBehaviour
     {
         randomizedKey();
         //trying to transform the first ant position
-        //Ant1.transform.rotation = Quaternion.AngleAxis(0, Vector3.up);
-        Ant1.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.AngleAxis(180, Vector3.up), Time.deltaTime * (.2f));
+        anim1.SetBool("HasLeaf", true);
+        anim2.SetBool("HasLeaf", false);
+        anim3.SetBool("HasLeaf", false);
+        anim4.SetBool("HasLeaf", false);
+        anim5.SetBool("HasLeaf", false);
     }
 
     void Update()
