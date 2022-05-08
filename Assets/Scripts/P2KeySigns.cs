@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class NewP1KeySigns : MonoBehaviour
+public class P2KeySigns : MonoBehaviour
 {
     //create the text to display
     [SerializeField] TextMeshProUGUI keyToPress;
@@ -15,8 +15,8 @@ public class NewP1KeySigns : MonoBehaviour
 
 
     //create a list using a range
-    static string[] keys = {"W","A","S","D"};
-    private KeyCode[] desiredKeys = {KeyCode.W,KeyCode.A,KeyCode.S,KeyCode.D};
+    static string[] keys = {"I","J","K","L"};
+    private KeyCode[] desiredKeys = {KeyCode.I,KeyCode.J,KeyCode.K,KeyCode.L};
 
     public List<string> keysRange = new List<string>(keys);
 
@@ -53,12 +53,12 @@ public class NewP1KeySigns : MonoBehaviour
                     switch (key)
                     {
                     //not the best solution but it works. individual ifs
-                    case KeyCode.W:
+                    case KeyCode.I:
                         Debug.Log("Pressed" + key);
-                        if(keyToPress.text == "W")
+                        if(keyToPress.text == "I")
                         {
                             Debug.Log("correct!");
-                            P1Score.scoreValueP1 += Points;
+                            P2Score.scoreValueP2 += Points;
                             randomizedKey();
                         }
                         else
@@ -66,12 +66,12 @@ public class NewP1KeySigns : MonoBehaviour
                             Debug.Log("incorrect");
                         }
                         break;
-                    case KeyCode.A:
+                    case KeyCode.J:
                         Debug.Log("Pressed" + key);
-                        if(keyToPress.text == "A")
+                        if(keyToPress.text == "J")
                         {
                             Debug.Log("correct!");
-                            P1Score.scoreValueP1 += Points;
+                            P2Score.scoreValueP2 += Points;
                             randomizedKey();
                         }
                         else
@@ -79,12 +79,12 @@ public class NewP1KeySigns : MonoBehaviour
                             Debug.Log("incorrect");
                         }
                         break;
-                    case KeyCode.S:
+                    case KeyCode.K:
                         Debug.Log("Pressed" + key);
-                        if(keyToPress.text == "S")
+                        if(keyToPress.text == "K")
                         {
                             Debug.Log("correct!");
-                            P1Score.scoreValueP1 += Points;
+                            P2Score.scoreValueP2 += Points;
                             randomizedKey();
                         }
                         else
@@ -92,20 +92,24 @@ public class NewP1KeySigns : MonoBehaviour
                             Debug.Log("incorrect");
                         }
                         break;
-                    case KeyCode.D:
+                    case KeyCode.L:
                         Debug.Log("Pressed" + key);
-                        if(keyToPress.text == "D")
+                        if(keyToPress.text == "L")
                         {
                             Debug.Log("correct!");
-                            P1Score.scoreValueP1 += Points;
+                            P2Score.scoreValueP2 += Points;
                             randomizedKey();
                         }
                         else
                         {
+                            //let's test if this gives us a new letter after we missed
+                            //randomizedKey();
                             Debug.Log("incorrect");
                         }
                         break;
                     default:
+                        //let's test if this gives us a new letter after we missed
+                        //randomizedKey();
                         Debug.Log("Missed");
                         break;
                     }
