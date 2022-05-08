@@ -16,6 +16,17 @@ public class LoadScene : MonoBehaviour
     //the thing that controls our animated transition:
     //public Animator transition;
 
+    //the 2 items for the credits screen
+    public GameObject credits;
+    public GameObject closeButton;
+
+    //the instructions screen
+    public GameObject Instructions;
+    public GameObject StartButton;
+
+    //we need to turn off the play button for the credits scene
+    public GameObject PlayButtonHide;
+
 
     //the function that will be triggered when we click the button:
     public void LoadTheScene()
@@ -26,6 +37,33 @@ public class LoadScene : MonoBehaviour
         //start our coroutine before we transition
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
         //This will send us to the next scene in the SceneManager
+
+    }
+
+    //this is the click that turns on the instructions
+    public void Instruct()
+    {
+        Playclick.Play();
+        Instructions.SetActive (true);
+        StartButton.SetActive (true);
+    }
+
+    //this is the click that turns on the credits
+    public void creditsScreen()
+    {
+        Playclick.Play();
+        credits.SetActive (true);
+        closeButton.SetActive (true);
+        PlayButtonHide.SetActive(false);
+    }
+
+    //this is what closes the credits
+    public void BacktoMM()
+    {
+        Playclick.Play();
+        credits.SetActive(false);
+        closeButton.SetActive(false);
+        PlayButtonHide.SetActive(true);
 
     }
 
