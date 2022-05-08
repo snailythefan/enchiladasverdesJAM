@@ -34,6 +34,7 @@ public class P2KeySigns : MonoBehaviour
 
     void Start()
     {
+        P2Score.scoreValueP2 = 0;
         randomizedKey();
         //trying to transform the first ant position
         //Ant1.transform.rotation = Quaternion.AngleAxis(0, Vector3.up);

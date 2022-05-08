@@ -88,6 +88,10 @@ public class LoadScene : MonoBehaviour
         Debug.Log("GameStart");
     }
 
+    public void LoadScene2()
+    {
+        SceneManager.LoadScene("Scene2");
+    }
 
 
 }
